@@ -1,20 +1,18 @@
 <div id="container">
-    <div class="video-container">
-    
-         
-      <video autoplay loop muted>
-        <source src="assets/video/video (1).mp4" type="video/mp4">
-        </video>
-  
-<ul class="menu">
-    <li><a routerLink="/" routerLinkActive="active"><i class="bi bi-house"></i></a></li>
-    <li><a routerLink="/destination" routerLinkActive="active">Destination</a></li>
-    <li><a *ngIf="userService.loggedUser.id" routerLink="/favorite" routerLinkActive="active"><i class="bi bi-heart"></i></a></li>
-    <li><a *ngIf="!userService.loggedUser.id" routerLink="/login"  routerLinkActive="active">Login or SingUp</a></li>
-    <li><a *ngIf="userService.loggedUser.id" routerLinkActive="active" (click)="logOut()"><i class="bi bi-box-arrow-right"></i></a></li>
-    <li><a *ngIf="userService.loggedUser.id" routerLink="/profile" routerLinkActive="active">{{userService?.loggedUser?.name}} <i class="bi bi-person-circle"></i></a></li>
-    <li><a *ngIf="userService.loggedUser.roles && userService.loggedUser.roles === 'ADMIN'"   routerLink="admin" routerLinkActive="active"><i class="bi bi-shield-lock-fill"></i></a></li>
-</ul>
- </div>
+  <div class="video-container">
+    <ul class="menu">
+      <li><a routerLink="/" routerLinkActive="active"><i class="bi bi-house"></i></a></li>
+      <li><a routerLink="/destination" routerLinkActive="active">Destination</a></li>
+      <li><a *ngIf="userService.loggedUser.id" routerLink="/favorite" routerLinkActive="active"><i
+            class="bi bi-heart"></i></a></li>
+      <li><a *ngIf="!userService.loggedUser.id" routerLink="/login" routerLinkActive="active">Login or SingUp</a></li>
+      <li><a *ngIf="userService.loggedUser.id" routerLinkActive="active" (click)="logOut()"><i
+            class="bi bi-box-arrow-right"></i></a></li>
+      <li><a *ngIf="userService.loggedUser.id" routerLink="/profile"
+          routerLinkActive="active">{{userService?.loggedUser?.name}} <i class="bi bi-person-circle"></i></a></li>
+      <li><a *ngIf="userService.loggedUser.roles && userService.loggedUser.roles === 'ADMIN'" routerLink="admin"
+          routerLinkActive="active"><i class="bi bi-shield-lock-fill"></i></a></li>
+    </ul>
+  </div>
 
- </div>
+</div>
