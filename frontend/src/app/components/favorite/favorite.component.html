@@ -1,0 +1,18 @@
+<br>
+
+<H2>Vaše omiljene destinacije: </H2>
+<div class="favorite">
+    <br>
+        <div class="main">
+            <h2>Sviđa vam se destinacija:</h2>
+            
+            <div *ngFor="let item of destination" class="divFavorite">
+               
+                <h4>{{item.name}}</h4>
+            <button class="btnFav" (click)="deleteFavoriteDest(item.id)">Delete favorite</button>
+            </div>
+     
+        
+    </div>
+    
+</div>

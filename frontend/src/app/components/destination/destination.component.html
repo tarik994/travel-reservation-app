@@ -1,0 +1,13 @@
+<div class="main d-flex flex-wrap justify-content-center">
+
+
+<div *ngFor="let place of destination;"  class="container"  >
+    <h1 class="nameDest">{{place.name}}</h1>
+    <img src={{place.image_url}} class="image">
+    <br>
+    <button *ngIf="userService.loggedUser.roles === 'ADMIN' || userService.loggedUser.roles === 'USER'" class="btn btn-info" id="btn" (click)="addFavoriteDest(place.name)">Dodaj u omiljene destinacije</button>
+    <button *ngIf="userService.loggedUser.roles === 'ADMIN' || userService.loggedUser.roles === 'USER'" class="btn btn-info" id="btn" (click)="placeDet(place.id)">Details</button>
+    <button class="adminBtn" *ngIf="userService.loggedUser.roles === 'ADMIN'" (click)="deleteDestination(place.id)">Delete</button>
+
+</div>
+</div>

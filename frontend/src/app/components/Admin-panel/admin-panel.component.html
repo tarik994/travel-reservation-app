@@ -1,0 +1,28 @@
+
+<div class="wrapper">
+  <div class="box" (click) ="active = 'destination'" >
+      <h4>Destination</h4>
+      <h4>Edit</h4>
+      
+
+  </div>
+
+  <div class="box" (click) ="active = 'hotels'" >
+      <h4>Hotels</h4>
+      <h4>Edit</h4>
+
+  </div>
+
+  <div class="box" (click) ="active = 'users'" >
+    <h4>Users</h4>
+    <h4>Edit</h4>
+
+</div>
+</div>
+<hr>
+<app-admin-edit-places *ngIf="active == 'destination'"></app-admin-edit-places>
+<app-admin-edit-hotels *ngIf="active == 'hotels'"></app-admin-edit-hotels>
+<app-admin-edit-users *ngIf="active == 'users'"></app-admin-edit-users>
+
+
+

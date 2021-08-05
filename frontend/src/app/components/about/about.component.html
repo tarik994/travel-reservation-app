@@ -1,0 +1,21 @@
+<br>
+
+<div class="aboutDest">
+  <h1>{{destination.name}}</h1>
+  <img src={{destination.image_url}} class="image">
+  <img src={{destination.image1_url}} class="image">
+  <img src={{destination.image2_url}} class="image">
+  <img src={{destination.image3_url}} class="image">
+  <p>{{destination.description}}</p>
+  <h3>{{destination.price}} KM</h3>
+  <div class="hotels">
+    <label for="hotels">Slobodni hoteli:</label>
+    <select name="hotels" id="hotels" [(ngModel)]="selectedHotel">
+      <option *ngFor="let hotel of hotels" [value]="hotel.id">{{hotel.name}}</option>
+    </select>
+
+  </div>
+  <button class="btnTravel" (click)="makeReservation()">Rezerviši</button> <br>
+
+
+</div>

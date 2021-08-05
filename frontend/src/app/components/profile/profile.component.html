@@ -1,0 +1,22 @@
+<br>
+<div *ngFor="let item of user" class="userDiv">
+ <div class="info">Ime: {{item.name}}</div>    
+    <div class="info">Prezime: {{item.surname}}</div>
+    <div class="info">email: {{item.email}}</div>
+</div>
+<hr>
+
+<div *ngFor="let item of destination" class="main">
+    <h3>Vaše rezervacije:</h3>
+    <h3>{{item.name}}</h3>
+    <p>{{item.description}}</p>
+    <p>Cijena za uplatiti: {{item.price}} KM</p>
+    <br>
+    <p>Vrijeme rezervacije: {{item.date_reservation}}</p>
+    <p>Rezervisani hotel: {{item.hotel_id}}</p>
+    
+    <button (click)="deleteReservation(item.id)" class="btnDelete">Uklonite rezervaciju</button>
+    
+
+
+</div>

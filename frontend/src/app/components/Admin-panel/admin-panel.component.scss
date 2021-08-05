@@ -1,0 +1,20 @@
+.wrapper{
+    padding: 10px;
+    margin: auto;
+    float: left;
+    .box{
+        width: 100%;
+        border: 1px solid gray;
+        padding: 10px;
+        margin: 10px;
+        justify-content: center;
+        border-radius: 30px;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover{
+            opacity: .6;
+            border: 2px solid rgb(29, 29, 65);
+        }
+    }
+}

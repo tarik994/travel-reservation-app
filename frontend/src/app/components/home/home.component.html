@@ -1,0 +1,21 @@
+
+<div class="homePage">
+    <div class="searchDiv">
+        <input (keyUp.enter)="search()" type="search" class="searchHome" placeholder="Where are you going..."  [(ngModel)]="searchDestination">       <br> <br>
+        <button (click)="search()" class="btn btn-outline-secondary">Search</button>
+        <br>
+    </div>
+</div>
+
+<div class="divSearch">
+    <br>
+    <div *ngFor="let sDest of destination" class="searchDest">
+        <h1>{{sDest.name}}</h1>
+        <h3><img src={{sDest.image_url}} class="imageSearch"></h3>
+        <button class="btnSearch" (click)="detailsSearch(sDest.id)">Details</button>
+    
+    </div>
+</div>
+
+
+

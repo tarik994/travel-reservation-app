@@ -1,0 +1,18 @@
+.favorite{
+    width: 600px;
+    margin: auto;
+    height: 200px;
+    text-align: center;
+    background-color: rgb(174, 218, 215);
+    opacity: .8;
+    border-radius: 30px;
+    .btnFav{
+        width: 100%;
+        border-radius: 30px;
+        background-color: rgb(236, 95, 95);
+        font-size: 1.2em;
+        color: white;
+        border: none;
+        outline: none;
+    }
+}

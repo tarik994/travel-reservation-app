@@ -1,0 +1,31 @@
+
+<div class="edit-forms" id="divInput">
+    <div class="input-info">
+      <form>
+        <div class="mb-3 col-md-d">
+          <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" placeholder="name" [(ngModel)]="hotel.name">
+        </div>
+        <div class="mb-3 col-md-d">
+          <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" placeholder="description" [(ngModel)]="hotel.description">
+        </div>
+      
+        <div class="hotels">
+          <label for="destination">Odaberite grad:</label>
+          <select name="destination" id="destination" [(ngModel)]="selectedDestination">
+            <option *ngFor="let dest of destination" [value]="dest.id">{{dest.name}}</option>
+          </select>
+      
+    
+        <button type="submit" class="btn btn-primary" (click)="saveHotel()">Save</button>
+        <br>
+        <div class="showHotels" *ngFor="let item of hotels">
+          <h3>{{item.name}}</h3>
+          <button (click)="deleteHotel(item.id)">Delete hotel</button>
+    
+        </div>
+    </div>
+
+    
+    
+  
+    

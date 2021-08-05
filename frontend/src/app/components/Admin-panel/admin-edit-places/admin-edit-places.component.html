@@ -1,0 +1,44 @@
+
+<div class="edit-forms">
+  <div class="input-info">
+    <form>
+      <div class="mb-3 col-md-d">
+        <input type="text" class="form-control" hasError ="false" [ngModelOptions]="{standalone: true}" placeholder="name" [(ngModel)]="destination.name">
+      </div>
+      <div class="mb-3 col-md-d">
+        <input type="text" class="form-control" hasError ="false" [ngModelOptions]="{standalone: true}" placeholder="description" [(ngModel)]="destination.description">
+      </div>
+      <div class="mb-3 col-md-d">
+        <input type="text" class="form-control" hasError ="false" [ngModelOptions]="{standalone: true}" placeholder="price"[(ngModel)]="destination.price" >
+      </div>
+      <div class="mb-3 col-md-d">
+        <input type="text" class="form-control" hasError ="false" [ngModelOptions]="{standalone: true}" placeholder="image_url" [(ngModel)]="destination.image_url">
+      </div>
+      <div class="mb-3 col-md-d">
+        <input type="text" class="form-control" hasError ="false" [ngModelOptions]="{standalone: true}" placeholder="image1_url"  [(ngModel)]="destination.image1_url">
+      </div>
+      <div class="mb-3 col-md-d">
+        <input type="text" class="form-control" hasError ="false" [ngModelOptions]="{standalone: true}" placeholder="image2_url" [(ngModel)]="destination.image2_url">
+      </div>
+      <div class="mb-3 col-md-d">
+        <input type="text" class="form-control" hasError ="false" [ngModelOptions]="{standalone: true}" placeholder="image3_url" [(ngModel)]="destination.image3_url">
+      </div>
+    
+     
+      
+    
+      <button type="submit" class="btn btn-primary" [disabled]="!destination.name || !destination.description || !destination.price || !destination.image_url || !destination.image1_url || !destination.image2_url || !destination.image3_url"  (click)="saveDestination()">Save</button>
+      
+    </form>
+  </div>
+
+  <div class="editPlaces" *ngFor="let item of editDest">
+    <p>{{item.name}}</p>
+    <p>{{item.description}}</p>
+    <p>{{item.price}}</p>
+    <button class="btnEdit" (click)="editDestination(item)">Edit</button>
+    <button  class="btnEdit" (click) = "updateDest()">Update</button>
+
+  </div>
+  
+  

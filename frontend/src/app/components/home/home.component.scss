@@ -1,0 +1,79 @@
+.homePage {
+
+    height: 100px;
+    background-color: rgb(17, 109, 101);
+    text-align: center;
+
+   
+   
+    .searchDiv {
+        margin: auto;
+        width: 800px;
+        top: 12%;
+        height: 400px;
+        left: 25%;
+        
+       
+    
+
+        .searchHome {
+            margin-top: 20px;
+            width: 800px;
+            border-radius: 35px;
+            height: 45px;
+            outline: none;
+            text-align: center;
+            font-size: 1.5em;
+            background-color: cadetblue;
+            color:white;
+            border:none;
+            
+        
+           
+              
+        } 
+        
+    }
+}
+
+  .divSearch{
+      width: 100%;
+      height: 489px;
+     background-color: rgb(17, 109, 101);
+
+
+    
+
+  }
+
+  .searchDest{
+      
+      width: 300px;
+      text-align: center;
+      border: 1px solid rgb(35, 128, 131);
+      border-radius: 30px;
+      background-color: rgb(7, 74, 83);
+      padding:10px;
+      color: white;
+      float: left;
+      margin: 10px;
+
+
+      .imageSearch{
+          width: 200px;
+
+          
+      }
+  }
+  .btnSearch{
+    width: 100%;
+    border-radius: 30px;
+    background-color: rgb(151, 212, 214);
+    color: rgb(18, 32, 28);
+    font-size: 1em;
+    border: none;
+}
+.btnSearch:hover {
+    opacity: .8;
+
+}
